@@ -14,7 +14,7 @@ if os.environ.get('IS_OFFLINE'):
 
 USERS_TABLE = os.environ['USERS_TABLE']
 
-@app.route('/users/<string:user_db>')
+@app.route('/users/<string:user_id>')
 def get_user(user_id):
     result = dynamodb_client.get_item(
         TableName=USERS_TABLE, Key={'userId': {'S': user_id}}

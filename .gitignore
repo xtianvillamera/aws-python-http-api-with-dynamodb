@@ -1,4 +1,12 @@
 # python modules
 venv/
+node_modules/
+.dynamodb/
+
+package*
+
+.serverless-wsgi
+serverless_wsgi*
+wsgi*
 
 .vscode

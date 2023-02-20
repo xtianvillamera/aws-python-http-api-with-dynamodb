@@ -6,7 +6,7 @@ from flask import Flask, jsonify, make_response, request
 
 app = Flask(__name__)
 
-dynamodb_client = boto3.client('dynamodb')
+dynamodb_client = boto3.client('dynamodb', region_name='us-east-1')
 
 if os.environ.get('IS_OFFLINE'):
     dynamodb_client = boto3.client(
